@@ -1,0 +1,9 @@
+div.auth-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: red;
+    padding: 20px 
+}
