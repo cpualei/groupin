@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { NavLink } from "react-router-dom/cjs/react-router-dom";
 import { logout } from "../../store/session";
-import "./LogoutButton.css";
 
 const LogoutButton = () => {
   const dispatch = useDispatch();
@@ -18,10 +17,10 @@ const LogoutButton = () => {
     <NavLink
       to="/"
       exact={true}
-      activeClassName="active"
-      id="logout-btn"
+      className="dropdown-items"
       onClick={onLogout}
     >
+      <i class="fa-solid fa-arrow-right-from-bracket"></i>
       Log out
     </NavLink>
   );

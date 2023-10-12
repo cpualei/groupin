@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import Dropdown from "./Dropdown";
+import AuthLinks from "./AuthLinks";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -17,13 +18,10 @@ const NavBar = () => {
             activeClassName="active"
             id="groupin-link"
           >
-            <i class="fa-solid fa-people-group"></i>&nbsp;
-            Groupin
+            <i class="fa-solid fa-people-group"></i>&nbsp; Groupin
           </NavLink>
         </div>
-        <div id="nav-right">
-          <Dropdown />
-        </div>
+        <div id="nav-right">{sessionUser ? <Dropdown /> : <AuthLinks />}</div>
       </div>
     </nav>
   );

@@ -6,19 +6,17 @@ import "../../Dropdown/Dropdown.css";
 function LoggedInMenu() {
   return (
     <>
-      <li className="dropdown-items first-item">
+      <li>
         <NavLink
           to="/"
           exact={true}
-          activeClassName="active"
-          className="dropdown-links"
+          className="dropdown-items first-item"
         >
           <i class="fa-solid fa-house-chimney"></i>
           Home
         </NavLink>
       </li>
-      <li className="dropdown-items">
-        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      <li>
         <LogoutButton />
       </li>
     </>
