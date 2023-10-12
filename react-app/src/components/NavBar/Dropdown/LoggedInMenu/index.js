@@ -6,12 +6,11 @@ import "../../Dropdown/Dropdown.css";
 function LoggedInMenu() {
   return (
     <>
-      <li className="dropdown-items first-item">
+      <li>
         <NavLink
           to="/"
           exact={true}
-          activeClassName="active"
-          className="dropdown-links"
+          className="dropdown-items first-item"
         >
           <i class="fa-solid fa-house-chimney"></i>
           Home
