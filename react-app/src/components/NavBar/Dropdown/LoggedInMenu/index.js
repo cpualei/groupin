@@ -16,8 +16,7 @@ function LoggedInMenu() {
           Home
         </NavLink>
       </li>
-      <li className="dropdown-items">
-        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+      <li>
         <LogoutButton />
       </li>
     </>
