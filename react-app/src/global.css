@@ -12,13 +12,10 @@ i {
 
 a {
     text-decoration: none;
+    color: #407a8c;
 }
 
 body {
     background-color: #101216;
     margin: 20px;
-    /* background-image: url("./images/network.png");
-    background-size: 500px;
-    background-position: center top;
-    background-repeat: no-repeat; */
 }

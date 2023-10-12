@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import LoggedInMenu from "../Dropdown/LoggedInMenu";
-import LoggedOutMenu from "../Dropdown/LoggedOutMenu";
 import "./Dropdown.css";
 
 function Dropdown() {
@@ -32,11 +31,7 @@ function Dropdown() {
       </button>
       {showMenu && (
         <ul id="dropdown-list">
-          {user ? (
-            <LoggedInMenu />
-          ) : (
-            <LoggedOutMenu />
-          )}
+          <LoggedInMenu />
         </ul>
       )}
     </div>

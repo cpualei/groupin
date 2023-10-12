@@ -5,5 +5,9 @@ div.auth-form-container {
 
 form {
     background-color: red;
-    padding: 20px 
+    padding: 20px
+}
+
+a#signin-link {
+    cursor: pointer;
 }
