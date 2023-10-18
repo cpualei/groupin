@@ -50,8 +50,8 @@
     border-bottom: 1px solid;
 }
 
-.fa-solid {
-    width: 25px;
+.dropdown-items .fa-house-chimney, .fa-arrow-right-from-bracket {
+    margin-right: 15px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {

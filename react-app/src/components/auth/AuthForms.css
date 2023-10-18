@@ -1,11 +1,65 @@
-div.auth-form-container {
+div.auth-container {
     display: flex;
     justify-content: center;
 }
 
 form {
-    background-color: red;
-    padding: 20px
+    background-color: #101216;
+    padding: 50px;
+    height: 350px;
+    width: 250px;
+}
+
+.auth-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-header > i.fa-people-group {
+    font-size: 40px;
+}
+
+h2.auth-h2 {
+    margin: 10px 0 0 0;
+}
+
+p.auth-under-h2-text {
+    margin: 10px 0 35px 0;
+    font-size: 16px;
+}
+
+p.auth-under-h2-text > span {
+    color: #3f7a8c;
+}
+
+.auth-labels-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.auth-inputs {
+    padding: 8px;
+}
+
+input {
+    color: #101216;
+    border-radius: 3px;
+    border: 1px transparent solid;
+    margin-top: 3px;
+}
+
+form > button {
+    margin-top: 35px;
+    width: -webkit-fill-available;
+    background-color: #3f7a8c;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 a#signin-link {

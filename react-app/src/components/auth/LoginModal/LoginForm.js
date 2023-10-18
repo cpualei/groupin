@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { login } from "../../../store/session";
 import "../AuthForms.css";
 
@@ -10,6 +10,7 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -27,39 +28,50 @@ const LoginForm = () => {
     setPassword(e.target.value);
   };
 
+  const handleRedirect = () => {
+    history.push("/dashboard");
+  }
+
   if (user) {
     return <Redirect to="/dashboard" />;
   }
 
   return (
-    <div className="auth-form-container">
+    <div className="auth-container">
       <form onSubmit={onLogin}>
+        <div className="auth-header">
+          <i className="fa-solid fa-people-group"></i>
+          <h2 className="auth-h2">Log in</h2>
+          <p className="auth-under-h2-text">Not a member yet?
+            &nbsp;<span>Sign up</span>
+          </p>
+        </div>
         <div>
           {errors.map((error, ind) => (
             <div key={ind}>{error}</div>
           ))}
         </div>
-        <div>
+        <div className="auth-labels-inputs">
           <label htmlFor="email">Email</label>
           <input
             name="email"
             type="text"
-            placeholder="Email"
             value={email}
             onChange={updateEmail}
-          />
+            className="auth-inputs"
+            />
         </div>
-        <div>
+        <div className="auth-labels-inputs">
           <label htmlFor="password">Password</label>
           <input
             name="password"
             type="password"
-            placeholder="Password"
             value={password}
             onChange={updatePassword}
-          />
-          <button type="submit">Login</button>
+            className="auth-inputs"
+            />
         </div>
+          <button type="submit" onClick={handleRedirect}>Log in</button>
       </form>
     </div>
   );
