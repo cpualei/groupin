@@ -13,7 +13,7 @@ function Dashboard() {
   // console.log("AFTER SESSION USER");
   const groupObjs = useSelector((state) => state.groups);
   const allGroups = Object.values(groupObjs);
-  const pinnedIds = user.pinned;
+  const pinnedIds = user?.pinned;
   const pinnedGroups = [];
   // console.log("BEFORE PINNED GROUPS");
   pinnedIds?.forEach((id) => {
