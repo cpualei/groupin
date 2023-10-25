@@ -42,9 +42,6 @@ const LoginForm = () => {
         <div className="auth-header">
           <i className="fa-solid fa-people-group"></i>
           <h2 className="auth-h2">Log in</h2>
-          <p className="auth-under-h2-text">Not a member yet?
-            &nbsp;<span>Sign up</span>
-          </p>
         </div>
         <div>
           {errors.map((error, ind) => (
@@ -72,6 +69,9 @@ const LoginForm = () => {
             />
         </div>
           <button type="submit" onClick={handleRedirect}>Log in</button>
+          <p className="auth-under-h2-text">Not a member yet?
+            &nbsp;<span>Sign up</span>
+          </p>
       </form>
     </div>
   );
