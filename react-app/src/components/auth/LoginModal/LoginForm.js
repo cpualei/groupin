@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useHistory, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { login } from "../../../store/session";
 import "../AuthForms.css";
 
@@ -10,7 +10,6 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
-  const history = useHistory();
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -28,10 +27,6 @@ const LoginForm = () => {
     setPassword(e.target.value);
   };
 
-  const handleRedirect = () => {
-    history.push("/dashboard");
-  }
-
   if (user) {
     return <Redirect to="/dashboard" />;
   }
@@ -42,9 +37,6 @@ const LoginForm = () => {
         <div className="auth-header">
           <i className="fa-solid fa-people-group"></i>
           <h2 className="auth-h2">Log in</h2>
-          <p className="auth-under-h2-text">Not a member yet?
-            &nbsp;<span>Sign up</span>
-          </p>
         </div>
         <div>
           {errors.map((error, ind) => (
@@ -71,7 +63,10 @@ const LoginForm = () => {
             className="auth-inputs"
             />
         </div>
-          <button type="submit" onClick={handleRedirect}>Log in</button>
+          <button type="submit">Log in</button>
+          <p className="auth-under-h2-text">Not a member yet?
+            &nbsp;<span>Sign up</span>
+          </p>
       </form>
     </div>
   );

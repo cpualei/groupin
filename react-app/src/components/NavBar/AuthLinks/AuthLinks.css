@@ -7,6 +7,7 @@
     cursor: pointer;
 }
 
-#signup-link {
+a#signup-link {
     margin-left: 20px;
+    cursor: pointer;
 }

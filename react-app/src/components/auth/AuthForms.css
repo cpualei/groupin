@@ -14,6 +14,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .auth-header > i.fa-people-group {
@@ -22,11 +23,6 @@ form {
 
 h2.auth-h2 {
     margin: 10px 0 0 0;
-}
-
-p.auth-under-h2-text {
-    margin: 10px 0 35px 0;
-    font-size: 16px;
 }
 
 p.auth-under-h2-text > span {
@@ -51,7 +47,7 @@ input {
 }
 
 form > button {
-    margin-top: 35px;
+    margin-top: 20px;
     width: -webkit-fill-available;
     background-color: #3f7a8c;
     color: white;
@@ -62,6 +58,12 @@ form > button {
     font-weight: bold;
 }
 
-a#signin-link {
+p.auth-under-h2-text {
+    margin: 20px 0 20px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+a#login-link {
     cursor: pointer;
 }
