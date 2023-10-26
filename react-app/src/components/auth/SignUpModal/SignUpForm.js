@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import { signUp } from "../../../store/session";
 
 const SignUpForm = () => {
@@ -95,11 +95,12 @@ const SignUpForm = () => {
             className="auth-inputs"
           ></input>
         </div>
-        <button type="submit">
-          Sign up
-        </button>
+        <button type="submit">Sign up</button>
         <p className="auth-under-h2-text">
-          Already a member? &nbsp;<span>Log in</span>
+          Already a member? &nbsp;
+          <span>
+            <Link to="/login">Log in</Link>
+          </span>
         </p>
       </form>
     </div>
