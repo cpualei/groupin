@@ -8,42 +8,35 @@ function Dashboard() {
   const sessionUserId = useSelector((state) => state.session.user.id);
   const users = useSelector((state) => state.users);
   const user = users[sessionUserId];
-  // console.log("BEFORE SESSION USER");
-  // const user = useSelector((state) => state.session.user);  // this should be changed to look like in Pin component ^^
-  // console.log("AFTER SESSION USER");
+
   const groupObjs = useSelector((state) => state.groups);
   const allGroups = Object.values(groupObjs);
   const pinnedIds = user?.pinned;
   const pinnedGroups = [];
-  // console.log("BEFORE PINNED GROUPS");
   pinnedIds?.forEach((id) => {
     return pinnedGroups.push(groupObjs[id]);
   });
-  // console.log("AFTER PINNED GROUPS");
-  // console.log("pinnedGroups", pinnedGroups);
 
   const [groupType, setGroupType] = useState(allGroups);
   const [searchedGroups, setSearchedGroups] = useState([]);
   const [showSearched, setShowSearched] = useState(false);
   const [displayPinned, setDisplayPinned] = useState(false);
 
-
   const handleDisplayPinned = () => {
-    setGroupType(pinnedGroups)
+    setGroupType(pinnedGroups);
     setDisplayPinned(true);
-  }
+  };
 
   const handleDisplayAll = () => {
-    setGroupType(allGroups)
+    setGroupType(allGroups);
     setDisplayPinned(false);
-  }
+  };
 
-  // console.log('grouptype', groupType)
   return (
     <div id="dashboard-container">
       <div id="dashboard">
         <div id="username-div">
-          <h1>Hey, {user.username}!</h1>
+          <h1>{user.username}'s Dashboard</h1>
         </div>
         <Search
           setSearchedGroups={setSearchedGroups}
@@ -52,18 +45,18 @@ function Dashboard() {
         />
         <div id="dashboard-tabs-div">
           <button
-            // className="dashboard-btns"
-            className={displayPinned ? "dashboard-tabs selected-tab" : "dashboard-tabs"}
+            className={
+              displayPinned ? "dashboard-tabs selected-tab" : "dashboard-tabs"
+            }
             id="pinned-tab"
-            // onClick={() => setGroupType(pinnedGroups)}
             onClick={handleDisplayPinned}
           >
             Pinned groups
           </button>
-          {/* <button className="dashboard-tab">Suggested Groups</button> */}
           <button
-            // className="dashboard-tab"
-            className={!displayPinned ? "dashboard-tabs  selected-tab" : "dashboard-tabs"}
+            className={
+              !displayPinned ? "dashboard-tabs  selected-tab" : "dashboard-tabs"
+            }
             id="browse-all-tab"
             onClick={handleDisplayAll}
           >

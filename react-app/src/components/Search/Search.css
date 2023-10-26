@@ -1,48 +1,46 @@
-#search-container {
+div#search-container {
     display: flex;
     justify-content: center;
 }
 
-#search-div {
+div#search-div {
     position: relative;
     width: 600px;
 }
 
-#search-div i {
+div#search-div i {
     position: absolute;
     top: 30px;
     left: 15px;
     color: #3f798c;
 }
 
-#search-div input {
+div#search-div input {
     width: -webkit-fill-available;
-    padding: 6px 40px 6px;
+    padding: 10px 40px 10px;
     margin: 20px 0 40px;
-    border: 5px #71a9a1 double;
     border-radius: 10px;
     color: #1f353d;
 }
 
 input:focus {
     outline: none;
-
 }
 
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    #search-div {
+    div#search-div {
         position: relative;
         width: 100%;
     }
 
-    #search-div i {
+    div#search-div i {
         top: 41px;
         left: 25px;
         font-size: 25px;
     }
 
-    #search-div input {
+    div#search-div input {
         height: 45px;
         font-size: 17px;
         padding: 6px 40px 6px 60px;
