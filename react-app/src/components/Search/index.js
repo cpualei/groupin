@@ -20,7 +20,6 @@ function Search({ setSearchedGroups, setShowSearched, groupType }) {
   return (
       <div id="search-container">
         <div id="search-div">
-          {/* <img id="search-img" src={search} alt="search" /> */}
           <i class="fa-solid fa-magnifying-glass"></i>
           <input
             placeholder="Search groups..."
